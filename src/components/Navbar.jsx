@@ -6,7 +6,7 @@ import jshopLogo from '../assets/svg/jshopLogo.svg';
 
 export default function Navbar() {
 	return (
-		<header>
+		<header className='flex justify-between'>
 			<Link to={'/'}>
 				<img src={jshopLogo} alt='Jshop Logo' />
 				<h1>Jshop</h1>
