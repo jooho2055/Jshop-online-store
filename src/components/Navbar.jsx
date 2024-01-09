@@ -23,7 +23,7 @@ export default function Navbar() {
 
 	return (
 		<header className='flex justify-between border-b border-gray-300 p-1'>
-			<Link to={'/'} className='flex items-center text-2xl text-brand pl-2'>
+			<Link to={'/'} className='flex items-center text-2xl text-brand pl-2 font-medium'>
 				<img src={jshopLogo} alt='Jshop Logo' className='w-11 h-11' />
 				<h1>Jshop</h1>
 			</Link>

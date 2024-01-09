@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@firebase/app", "npm:0.9.25"],\
             ["@testing-library/jest-dom", "npm:5.17.0"],\
             ["@testing-library/react", "virtual:73f7e07bcc29caf34eca5fbbd24c9babadb6a52ca04bdd4dc98d942789727945696b77634c0e71e945161cdc5a0494432ea40895d3baa49ca53491955911f69b#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:73f7e07bcc29caf34eca5fbbd24c9babadb6a52ca04bdd4dc98d942789727945696b77634c0e71e945161cdc5a0494432ea40895d3baa49ca53491955911f69b#npm:13.5.0"],\
@@ -4579,7 +4580,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@grpc/grpc-js", "npm:1.9.13"],\
             ["@grpc/proto-loader", "npm:0.7.10"],\
-            ["@types/node", "npm:20.10.6"]\
+            ["@types/node", "npm:20.10.7"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5972,10 +5973,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
-        ["npm:20.10.6", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-20.10.6-59a7d708ba-ada40e4ccb.zip/node_modules/@types/node/",\
+        ["npm:20.10.7", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.10.7-2d1f5de3e9-86f4f96f51.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:20.10.6"],\
+            ["@types/node", "npm:20.10.7"],\
             ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
@@ -12832,6 +12833,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["jshop", "workspace:."],\
+            ["@firebase/app", "npm:0.9.25"],\
             ["@testing-library/jest-dom", "npm:5.17.0"],\
             ["@testing-library/react", "virtual:73f7e07bcc29caf34eca5fbbd24c9babadb6a52ca04bdd4dc98d942789727945696b77634c0e71e945161cdc5a0494432ea40895d3baa49ca53491955911f69b#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:73f7e07bcc29caf34eca5fbbd24c9babadb6a52ca04bdd4dc98d942789727945696b77634c0e71e945161cdc5a0494432ea40895d3baa49ca53491955911f69b#npm:13.5.0"],\
@@ -16169,7 +16171,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@protobufjs/path", "npm:1.1.2"],\
             ["@protobufjs/pool", "npm:1.1.0"],\
             ["@protobufjs/utf8", "npm:1.1.0"],\
-            ["@types/node", "npm:20.10.6"],\
+            ["@types/node", "npm:20.10.7"],\
             ["long", "npm:5.2.3"]\
           ],\
           "linkType": "HARD"\
