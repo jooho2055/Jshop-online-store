@@ -34,7 +34,7 @@ export function onUserStateChange(callback) {
 	onAuthStateChanged(auth, async (user) => {
 		// 1. if user exist
 		const updatedUser = user ? await adminUser(user) : null;
-
+		console.log(updatedUser);
 		callback(updatedUser);
 	});
 }

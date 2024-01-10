@@ -9,9 +9,14 @@ import { Navigate } from 'react-router-dom';
 // if requirement is fullfilled, show 'children'
 
 export default function ProtectedRoute({ children, requireAdmin }) {
-	const { user } = useAuthContext();
+	const { user, isLoading } = useAuthContext();
 
-	if (!user || (requireAdmin && !user.isAdmin)) {
+	if (isLoading) {
+		return <div>Loading...</div>;
+	}
+
+	if (!user || (requireAdmin && !user?.isAdmin)) {
+		console.log(user);
 		return <Navigate to='/' replace />; // replace (true) {not storing in history}
 	}
 
