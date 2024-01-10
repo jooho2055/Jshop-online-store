@@ -6,7 +6,7 @@ import {
 	signOut,
 	onAuthStateChanged,
 } from 'firebase/auth';
-import { getDatabase, ref, child, get } from 'firebase/database';
+import { getDatabase, ref, get } from 'firebase/database';
 
 const firebaseConfig = {
 	apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -46,7 +46,6 @@ async function adminUser(user) {
 		.then((snapshot) => {
 			if (snapshot.exists()) {
 				const admins = snapshot.val();
-				console.log(admins);
 				const isAdmin = admins.includes(user.uid);
 				return { ...user, isAdmin };
 			}

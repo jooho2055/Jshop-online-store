@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiShoppingBag } from 'react-icons/fi';
 import { BsFillPencilFill } from 'react-icons/bs';
 import jshopLogo from '../assets/svg/jshopLogo.svg';
-import { login, logout, onUserStateChange } from '../api/firebase';
 import User from './User';
+import Button from './ui/Button';
+import { useAuthContext } from './context/AuthContext';
 
 export default function Navbar() {
-	const [user, setUser] = useState();
-
-	useEffect(() => {
-		onUserStateChange(setUser);
-	}, []);
+	const { user, login, logout } = useAuthContext();
 
 	// const handleLogin = () => {
 	// 	login(); // then(user => setUser(user))
@@ -23,19 +19,22 @@ export default function Navbar() {
 
 	return (
 		<header className='flex justify-between border-b border-gray-300 p-1'>
-			<Link to={'/'} className='flex items-center text-2xl text-brand pl-2 font-medium'>
-				<img src={jshopLogo} alt='Jshop Logo' className='w-11 h-11' />
-				<h1>Jshop</h1>
+			<Link to={'/'} className='flex items-center text-3xl text-brand pl-4'>
+				<img src={jshopLogo} alt='Jshop Logo' className='w-[3.5rem] h-[3.5rem]' />
+				<h1 className='pl-1 font-mono pt-1'>Jshop</h1>
 			</Link>
-			<nav className='flex items-center gap-4 font-semibold pr-4'>
+			<nav className='flex items-center gap-4 font-mono font-semibold pr-4'>
 				<Link to={'/products'}>Products</Link>
-				<Link to={'/carts'}>Carts</Link>
-				<Link to={'/products/new'} className='text-2xl'>
-					<BsFillPencilFill />
-				</Link>
+				{user && <Link to={'/carts'}>Carts</Link>}
+				{user && user.isAdmin && (
+					<Link to={'/products/new'} className='text-2xl'>
+						<BsFillPencilFill />
+					</Link>
+				)}
+
 				{user && <User user={user} />}
-				{!user && <button onClick={login}>Login</button>}
-				{user && <button onClick={logout}>Logout</button>}
+				{!user && <Button text={'Login'} onClick={login} />}
+				{user && <Button text={'Logout'} onClick={logout} />}
 			</nav>
 		</header>
 	);
