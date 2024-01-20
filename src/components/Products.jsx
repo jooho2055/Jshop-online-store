@@ -13,10 +13,10 @@ export default function Products() {
 	return (
 		<>
 			{isLoading && <p>Loading...</p>}
-			{error && <p>{error}</p>}
+			{error && <p>{error.message}</p>}
 			<ul className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-4'>
 				{products &&
-					products.map((product) => (
+					products?.map((product) => (
 						<ProductCard key={product.id} product={product}></ProductCard>
 					))}
 			</ul>

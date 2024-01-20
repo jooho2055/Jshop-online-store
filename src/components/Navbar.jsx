@@ -18,12 +18,12 @@ export default function Navbar() {
 	// };
 
 	return (
-		<header className='flex justify-between  border-gray-300 p-1'>
+		<header className='flex justify-between  border-gray-300 p-1 border-b-2'>
 			<Link to={'/'} className='flex items-center text-3xl text-brand pl-4'>
 				<img src={jshopLogo} alt='Jshop Logo' className='w-[3.5rem] h-[3.5rem]' />
 				<h1 className='pl-1 font-mono pt-1 font-semibold'>Jshop</h1>
 			</Link>
-			<nav className='flex items-center gap-4 font-mono font-semibold pr-4'>
+			<nav className='flex items-center gap-4 font-mono font-semibold pr-4 '>
 				<Link to={'/products'}>Products</Link>
 				{user && <Link to={'/carts'}>Carts</Link>}
 				{user && user.isAdmin && (
